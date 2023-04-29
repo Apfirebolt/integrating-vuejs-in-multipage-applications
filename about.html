@@ -54,6 +54,9 @@
     <p v-for="(currency, index) in currencyValues" class="has-text-primary-dark m-3">
       {{ currency | currencyFilter }}
     </p>
+    <p class="has-text-centered has-text-bold has-text-primary is-size-2 has-text-weight-bold">
+      {{ currencyContent }}
+    </p>
   </section>
   <script>
     let app = new Vue({
@@ -63,6 +66,12 @@
           name: 'James',
           counter: 1,
           currencyValues: [10, 50, 100, 200, 500, 2000]
+        }
+      },
+      computed: {
+        // a computed getter
+        currencyContent() {
+          return this.currencyValues.length > 0 ? 'Yes' : 'No'
         }
       },
       filters: {

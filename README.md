@@ -11,6 +11,10 @@ Smooth integration of Vue js in multi-page applications which might have used Va
 
 ## Data, Events and Filters
 
+To use Vue js in your multi-page application, you need to target the section where you need to use Vue in the Vue instance through class or ID (aiming through ID is preferred). Vue prevents targeting body element of the page.
+
 The about.html page contains examples for event handling through Vue. The section tag is wrapped with a Vue object so that event and data handling can be done through Vue instead of pure Vanilla JS.
 
-Filtering is demonstrated using currency where $ sign is appended before each currency value in the currency array.
+Filtering is demonstrated using currency where $ sign is appended before each currency value in the currency array. 
+
+
