@@ -18,3 +18,25 @@ The about.html page contains examples for event handling through Vue. The sectio
 Filtering is demonstrated using currency where $ sign is appended before each currency value in the currency array. 
 
 
+## Vue JS Resources
+
+### Books
+
+| Title              | Author |
+| :---------------- | :------: |
+| Python Hat        |   True   |
+
+### Youtube Channels
+
+| Channel Name              | Owner | URL |
+| :---------------- | :------: | ----: |
+| Python Hat        |   True   | 23.99 |
+
+### Udemy Courses
+
+| Title             | Teacher |
+| :---------------- | :------: |
+| Python Hat        |   True   |
+
+
+
