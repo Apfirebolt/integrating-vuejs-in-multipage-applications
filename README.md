@@ -36,23 +36,23 @@ Animating through classes could be the easiest way to animate stuff in Vue JS wh
 Conditional rendering of DOM elements can be controlled using v-if and v-show built in directives in Vue JS.
 
 
-✅ ## Vue JS Resources
+## ✅  Vue JS Resources
 
 This would contain the resources I've went through while learning Vue JS over the years I've been working in Vue JS.
 
-📚 ### Books
+### 📚 Books
 
 | Title              | Author |
 | :---------------- | :------: |
 | Python Hat        |   True   |
 
-🔥 ### Youtube Channels
+### 🔥 Youtube Channels
 
 | Channel Name              | Owner | URL |
 | :---------------- | :------: | ----: |
 | Python Hat        |   True   | 23.99 |
 
-🎥 ### Udemy Courses
+ ### 🎥 Udemy Courses
 
 | Title             | Teacher |
 | :---------------- | :------: |
