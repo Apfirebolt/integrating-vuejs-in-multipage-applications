@@ -4,18 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>About Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.1/vue.js"></script>
-  <style>
-    
-  </style>
 </head>
 
 <body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" width="148" height="36">
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/index.html">
+          HOME
+        </a>
+
+        <a class="navbar-item" href="/pokemon.html">
+          POKEMON
+        </a>
+
+        <a class="navbar-item" href="/about.html">
+          ABOUT
+        </a>
+
+        <a class="navbar-item" href="/animation.html">
+          ANIMATION
+        </a>
+
+        <a class="navbar-item" href="/conditional.html">
+          CONDITION
+        </a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero del producto -->
   <section class="hero is-white is-fullheight" id="app">
@@ -34,8 +62,9 @@
             <div class="buttons">
               <p id="counterValue" class="mr-3">
                 Counter Value - {{ counter }}
-              </p>  
-              <button class="button is-yellow" id="counterBtn" @click="incrementCounter">Counter <span id="counterValue"></span></button>
+              </p>
+              <button class="button is-yellow" id="counterBtn" @click="incrementCounter">Counter <span
+                  id="counterValue"></span></button>
             </div>
           </div>
           <div data-aos="fade-right" class="column
@@ -77,10 +106,11 @@
       filters: {
         currencyFilter(value) {
           return '$ ' + value
-        } 
+        }
       },
       methods: {
         incrementCounter() {
+          // console.log('Counter incremented', this.counter)
           this.counter += 1;
         }
       }

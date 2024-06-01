@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Vue Tutorial</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -20,27 +20,31 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" width="148" height="36">
       </a>
     </div>
 
     <div class="navbar-menu">
 
       <div class="navbar-end">
-        <a class="navbar-item">
-          WHY?
+        <a class="navbar-item" href="/index.html">
+          HOME
         </a>
 
-        <a class="navbar-item">
-          BUY
+        <a class="navbar-item" href="/pokemon.html">
+          POKEMON
         </a>
 
-        <a class="navbar-item">
-          ILLUSTRATION SERIES
+        <a class="navbar-item" href="/about.html">
+          ABOUT
         </a>
 
-        <a class="navbar-item">
-          EXCLUSIVE ILLUSTRATIONS
+        <a class="navbar-item" href="/animation.html">
+          ANIMATION
+        </a>
+
+        <a class="navbar-item" href="/conditional.html">
+          CONDITION
         </a>
 
       </div>
@@ -59,14 +63,8 @@
           is-5-widescreen 
           is-5-fullhd " data-aos="fade-down">
             <h1 class="title titled is-1 mb-6">
-              Evolving business with technology
+              Vue JS Multipage Tutorial
             </h1>
-            <div class="buttons">
-              <p id="counterValue" class="mr-3">
-                Counter Value - 
-              </p>  
-              <button class="button is-yellow" id="counterBtn">Counter <span id="counterValue"></span></button>
-            </div>
           </div>
           <div data-aos="fade-right" class="column
           is-10-mobile 
@@ -83,15 +81,6 @@
       </div>
     </div>
   </section>
-  <script>
-    let counter = 1;
-    let counterBtn = document.querySelector('#counterBtn');
-    
-    counterBtn.addEventListener("click", function() {
-        counter += 1
-        document.getElementById("counterValue").innerHTML = 'Counter Value - ' + counter;
-    });
-  </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
