@@ -2,35 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.1/vue.js"></script>
     <style>
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 0 auto;
+        }
 
+        .cell {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 200px;
+            margin: 1rem;
+        }
+
+        .v-enter-active,
+        .v-leave-active {
+            transition: opacity 0.5s ease;
+        }
+
+        .v-enter-from,
+        .v-leave-to {
+            opacity: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            margin: auto 1rem;
+            font-size: 3rem;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Hero del producto -->
-    <section class="hero is-white is-fullheight" id="app">
-        <div class="container">
+    <section id="app">
+        <div>
+            <h1 class="has-text-primary">
+                Pokemon Page
+            </h1>
             <div v-if="isLoading">
-                <p>
-                    Loading ...
-                </p>
+                <p>Loading ...</p>
             </div>
-            <div v-else>
-                <div v-for="(item, index) in pokemon" :key="index" class="card">
-                    <div class="card-content">
-                        <div class="content has-text-danger">
-                            {{ item.name }}
-                        </div>
+            <div class="grid" v-else>
+                <div v-for="(item, index) in pokemon" :key="index">
+                    <div class="cell">
+                        <div class="">{{ item.name }}</div>
                     </div>
                 </div>
             </div>
@@ -40,23 +69,26 @@
         let app = new Vue({
             el: "#app",
             mounted() {
-                this.getApiData()
+                this.getApiData();
             },
             data() {
                 return {
                     pokemon: [],
-                    isLoading: false
-                }
+                    name: 'Amit',
+                    isLoading: false,
+                };
             },
             methods: {
                 async getApiData() {
                     this.isLoading = true;
-                    const responseData = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0');
+                    const responseData = await fetch(
+                        "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0"
+                    );
                     const data = await responseData.json();
                     this.isLoading = false;
-                    this.pokemon = data.results
-                }
-            }
+                    this.pokemon = data.results;
+                },
+            },
         });
     </script>
 </body>
